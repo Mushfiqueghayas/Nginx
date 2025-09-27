@@ -42,7 +42,7 @@ Replace contents with:
         # ip_hash;   # Uncomment to bind a client to same backend
     }
   
-  server {
+    server {
       listen 80;
       server_name localhost;
   
