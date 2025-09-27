@@ -97,7 +97,7 @@ Visit:
         http://localhost:3000
         http://localhost:3002
         
-✅ You should see: ✅Hello This is MUSHFIQUE GHAYAS from Node.js backend SERVICE-2 !!!!
+✅ You should see: ✅Hello This is MUSHFIQUE GHAYAS from Node.js backend SERVICE-1 !!!!
 
 ✅ You should see: ✅Hello This is MUSHFIQUE GHAYAS from Node.js backend SERVICE-2 !!!!
 
