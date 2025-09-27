@@ -25,22 +25,22 @@ Easy caching and compression
 ### 🔧 File: /etc/nginx/sites-available/default
 Update the existing server block or create a new one:
 
-        server {
-            listen 80;
-            server_name localhost;
+    server {
+        listen 80;
+        server_name localhost;
         
-            location /service1/ {
-                proxy_pass http://localhost:3000;
-                proxy_set_header Host $host;
-                proxy_set_header X-Real-IP $remote_addr;
-            }
-
-            location /service2/ {
-                proxy_pass http://localhost:3001;
-                proxy_set_header Host $host;
-                proxy_set_header X-Real-IP $remote_addr;
-            }
+        location /service1/ {
+            proxy_pass http://localhost:3000;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
         }
+
+        location /service2/ {
+            proxy_pass http://localhost:3001;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+        }
+    }
 
 ### Breakdown:
 proxy_pass → forwards requests to your backend app
