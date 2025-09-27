@@ -25,22 +25,22 @@ Benefits:
 
 Edits
 
-  sudo nano /etc/nginx/sites-available/default
+    sudo nano /etc/nginx/sites-available/default
 
 Replace contents with:
 
-  upstream service1_backend {
-      server localhost:3000;
-      server localhost:3002;
-      # Optional load balancing method: round-robin (default), least_conn, ip_hash
-      # least_conn;
-  }
-  
-  upstream service2_backend {
-      server localhost:3001;
-      server localhost:3003;
-      # ip_hash;   # Uncomment to bind a client to same backend
-  }
+    upstream service1_backend {
+        server localhost:3000;
+        server localhost:3002;
+        # Optional load balancing method: round-robin (default), least_conn, ip_hash
+        # least_conn;
+    }
+    
+    upstream service2_backend {
+        server localhost:3001;
+        server localhost:3003;
+        # ip_hash;   # Uncomment to bind a client to same backend
+    }
   
   server {
       listen 80;
