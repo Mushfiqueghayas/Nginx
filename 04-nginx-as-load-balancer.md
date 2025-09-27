@@ -3,7 +3,7 @@
 ## 🎯 Goal
 Use NGINX to distribute traffic across multiple backend servers — improving availability, reliability, and scalability of your applications.
 
-# 🧠 What is Load Balancing?
+## 🧠 What is Load Balancing?
 Load balancing is the process of distributing incoming network traffic across multiple backend servers.
 
 Benefits:
@@ -69,33 +69,87 @@ Replace contents with:
     }
 
 ## 🧪 Demo: Load Balance Two Local Backend Servers
-Step 1: Create Backend Servers
+### Step 1: Create Backend Servers
 We'll run two simple HTTP servers using Node.js.
 
-### server1.js
+#### server1.js
 
     const http = require('http');
       http.createServer((req, res) => {
         res.end('✅Hello This is MUSHFIQUE GHAYAS from Node.js backend SERVICE-1 SERVER-1 !!!!');
       }).listen(3000);
 
-### server2.js
+#### server2.js
 
     const http = require('http');
           http.createServer((req, res) => {
                   res.end('✅Hello This is MUSHFIQUE GHAYAS from Node.js backend SERVICE-1 SERVER-2 !!!!');
           }).listen(3002);
 
-### server3.js
+#### server3.js
 
     const http = require('http');
       http.createServer((req, res) => {
         res.end('✅Hello This is MUSHFIQUE GHAYAS from Node.js backend SERVICE-2 SERVER-1 !!!!');
       }).listen(3001);
 
-### server4.js
+#### server4.js
 
     const http = require('http');
       http.createServer((req, res) => {
         res.end('✅ Hello This is MUSHFIQUE GHAYAS from Node.js backend SERVICE-2 SERVER-2 !!!!');
       }).listen(3003);
+
+### Step 2: Run both servers
+
+    node server1.js &
+    node server2.js &
+    node server3.js &
+    node server4.js &
+    
+### 3 Step 3: Reload NGINX
+
+    sudo nginx -t
+    sudo systemctl reload nginx
+    
+### Step 4: Test the Load Balancer
+
+Open a browser or use curl:
+
+    curl http://localhost/api/service1/
+    curl http://localhost/api/service2/
+
+Run it multiple times — you should see the response alternate between:
+
+    âœ…Hello This is MUSHFIQUE GHAYAS from Node.js backend SERVICE-1 SERVER-1 !!!!
+    âœ…Hello This is MUSHFIQUE GHAYAS from Node.js backend SERVICE-1 SERVER-2 !!!!
+    
+    âœ…Hello This is MUSHFIQUE GHAYAS from Node.js backend SERVICE-2 SERVER-1 !!!!
+    âœ…Hello This is MUSHFIQUE GHAYAS from Node.js backend SERVICE-2 SERVER-2 !!!!
+
+✅ You’ve just created a working load balancer using NGINX!
+
+## 🔄 Switching Load Balancing Methods
+
+### Use Least Connections
+
+    upstream backend_app {
+        least_conn;
+        server 127.0.0.1:3001;
+        server 127.0.0.1:3002;
+    }
+
+### Use IP Hash
+
+    upstream backend_app {
+        ip_hash;
+        server 127.0.0.1:3001;
+        server 127.0.0.1:3002;
+    }
+### Weighted servers:
+
+    upstream service1_backend {
+        server localhost:8081 weight=3;
+        server localhost:8083 weight=1;
+    }
+
