@@ -41,11 +41,11 @@ NGINX is one of the fastest and most popular web servers used for this purpose.
 
 1. Create an HTML file:
    
-    echo "<h1>Hello from NGINX Web Server</h1>" | sudo tee /var/www/html/index.html
+        echo "<h1>Hello from NGINX Web Server</h1>" | sudo tee /var/www/html/index.html
 
 3. Reload NGINX:
    
-    sudo systemctl reload nginx
+        sudo systemctl reload nginx
 
 5. Test: Visit: http://localhost or your server’s IP in browser.
 
