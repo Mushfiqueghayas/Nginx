@@ -10,18 +10,17 @@ When users visit your website, the web server responds with these files.
 NGINX is one of the fastest and most popular web servers used for this purpose.
 
 # 📝 Anatomy of a Basic server Block
-  server {
-      listen 80;
-      server_name localhost;
-
-      root /var/www/html;
-      index index.html;
-
-      location / {
-        try_files $uri $uri/ =404;
-      }
-  }
-
+    server {
+        listen 80;
+        server_name localhost;
+    
+        root /var/www/html;
+        index index.html;
+    
+        location / {
+            try_files $uri $uri/ =404;
+        }
+    }
 # Breakdown:
  * listen 80; → Listens on HTTP port 80
  * server_name localhost; → Domain or IP to respond to
