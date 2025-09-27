@@ -7,6 +7,9 @@
 
 <img width="1920" height="513" alt="image" src="https://github.com/user-attachments/assets/f7d76860-a31b-48ff-b250-8f37d8d5cebb" />
 
+<img width="1426" height="107" alt="image" src="https://github.com/user-attachments/assets/137d408f-9a94-4000-b4a8-e844df1962fa" />
+
+<img width="1322" height="105" alt="image" src="https://github.com/user-attachments/assets/dbaf38a0-f7cc-4605-b97b-a3ce1a49e24f" />
 
 
 # Nginx installation on RHEL/CentOS
