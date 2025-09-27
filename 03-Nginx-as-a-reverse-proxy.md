@@ -42,6 +42,9 @@ Update the existing server block or create a new one:
         }
     }
 
+
+<img width="1153" height="115" alt="image" src="https://github.com/user-attachments/assets/810e59e0-8df7-43bb-835c-2101a9c69541" />
+
 ### Breakdown:
 proxy_pass → forwards requests to your backend app
 proxy_set_header → preserves original request metadata (like IP and host)
