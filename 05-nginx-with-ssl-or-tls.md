@@ -12,7 +12,7 @@ This is ideal for local development, internal tools, and non-public test environ
     
 ## 🛠️ Step-by-Step: Create a Self-Signed Certificate
 
-## Step 1: Generate SSL Certificate and Key
+### Step 1: Generate SSL Certificate and Key
   
     sudo openssl req -x509 -nodes -days 365 \
      -newkey rsa:2048 \
@@ -23,7 +23,7 @@ When prompted:
 
   * Common Name (CN): use localhost or your server’s IP
 
-## Step 2: Update NGINX Configuration
+### Step 2: Update NGINX Configuration
 
 Edit the default site config:
 
@@ -71,4 +71,45 @@ Replace with the following:
           proxy_set_header Host $host;
           proxy_set_header X-Real-IP $remote_addr;
      }
-   }
+    }
+
+### Step 3: Reload NGINX
+
+Check and reload configuration:
+
+    sudo nginx -t
+    sudo systemctl reload nginx
+    
+Step 4: Test HTTPS Locally
+
+Open your browser and visit:
+
+    https://localhost
+    https://localhost/api/service1/
+    https://localhost/api/service2/
+    
+⚠️ You will see a warning:
+
+"Your connection is not private"
+
+✅ That’s expected with self-signed certs. Proceed anyway to view your site securely.
+
+## 📁 SSL File Paths Recap
+
+|          Path                        |	Purpose            |
+|--------------------------------------|--------------------|
+|/etc/ssl/certs/nginx-selfsigned.crt   |	SSL certificate    |
+|/etc/ssl/private/nginx-selfsigned.key |	Private key        |
+|/etc/nginx/sites-available/default    |	HTTPS proxy config |
+
+#🧪 Bonus: Test Without Browser (curl)
+    
+    curl -k https://localhost
+
+`-k` allows insecure (self-signed) HTTPS connections.
+
+## ✅ Summary
+ * Self-signed SSL is perfect for secure local development.
+ * Requires only OpenSSL and a few lines in NGINX.
+ * Always test your HTTPS setup with curl and browser.
+ * In production, switch to Let’s Encrypt or trusted CAs.
