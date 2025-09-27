@@ -78,7 +78,9 @@ proxy_set_header → preserves original request metadata (like IP and host)
         node server1.js &
         node server2.js &
         
-#### Your app is now running at `http://localhost:3000` and `http://localhost:3001`
+#### Your app is now running at `http://localhost` `http://localhost:3000` and `http://localhost:3001`
+
+<img width="1911" height="487" alt="image" src="https://github.com/user-attachments/assets/c7b1c5c6-77a6-4c39-918b-5ac708906002" />
 
 <img width="1483" height="338" alt="image" src="https://github.com/user-attachments/assets/12e0bb21-1952-4dd7-a5de-eaefd2d38efe" />
 
