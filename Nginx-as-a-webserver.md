@@ -57,7 +57,7 @@ NGINX is one of the fastest and most popular web servers used for this purpose.
 2. Add index.html:
    
         <!-- index.html -->
-        <h1>Hello from NGINX in Docker!</h1>
+        <h1>This is MUSHFIQUE GHAYAS from NGINX Web Server in Docker</h1>
   
 3. Run NGINX Docker container:
    
