@@ -56,20 +56,64 @@ proxy_set_header → preserves original request metadata (like IP and host)
 ### Step 2: Create a simple backend app
 
       mkdir ~/node-backend && cd ~/node-backend
-      nano server.js
+      nano server1.js
+      nano server2.js
       
 #### Paste this:
 
         const http = require('http');
         http.createServer((req, res) => {
-          res.end('Hello from Node.js backend!');
+          res.end('✅Hello This is MUSHFIQUE GHAYAS from Node.js backend SERVICE-1 !!!!');
+        }).listen(3000);
+
+        ----------------------------------------------------------------------------------------
+
+        const http = require('http');
+        http.createServer((req, res) => {
+          res.end('✅Hello This is MUSHFIQUE GHAYAS from Node.js backend SERVICE-2 !!!!');
         }).listen(3000);
 
 #### Run it:
 
-        node server.js
+        node server1.js &
+        node server2.js &
         
 #### Your app is now running at `http://localhost:3000`
 
+### Step 3: Test and reload NGINX
 
+Check config for syntax errors:
 
+        sudo nginx -t
+        
+Reload NGINX:
+
+        sudo systemctl reload nginx
+        
+Step 5: Test in browser
+
+Visit:
+
+        http://localhost:3000
+        http://localhost:3002
+        
+✅ You should see: ✅Hello This is MUSHFIQUE GHAYAS from Node.js backend SERVICE-2 !!!!
+✅ You should see: ✅Hello This is MUSHFIQUE GHAYAS from Node.js backend SERVICE-2 !!!!
+
+## 📁 File Structure Recap (Ubuntu)
+
+|             Path                  |	       Purpose                     |
+|-----------------------------------|--------------------------------------|
+|/etc/nginx/nginx.conf              |Global NGINX settings                 |
+|/etc/nginx/sites-available/default |Active site config for reverse proxy  |
+|/var/www/html                      |Not used in reverse proxy             |
+|/var/log/nginx/access.log          |Logs all requests                     |
+
+	
+## ✅ Summary
+NGINX can proxy traffic to backend apps using proxy_pass.
+Config changes go in /etc/nginx/sites-available/default (on Ubuntu).
+Always test config and reload NGINX after changes.
+Ideal for API gateways, internal routing, and SSL termination.	
+	
+	
