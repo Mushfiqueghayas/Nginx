@@ -80,6 +80,10 @@ proxy_set_header → preserves original request metadata (like IP and host)
         
 #### Your app is now running at `http://localhost:3000` and `http://localhost:3001`
 
+<img width="1483" height="338" alt="image" src="https://github.com/user-attachments/assets/12e0bb21-1952-4dd7-a5de-eaefd2d38efe" />
+
+<img width="1385" height="322" alt="image" src="https://github.com/user-attachments/assets/00676f5c-1f8a-46cb-8c07-46d7a4afce05" />
+
 ### Step 3: Test and reload NGINX
 
 Check config for syntax errors:
