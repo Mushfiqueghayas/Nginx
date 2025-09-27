@@ -29,13 +29,13 @@ Update the existing server block or create a new one:
         listen 80;
         server_name localhost;
         
-        location api/service1/ {
+        location /api/service1/ {
             proxy_pass http://localhost:3000;
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
         }
 
-        location api/service2/ {
+        location /api/service2/ {
             proxy_pass http://localhost:3001;
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
