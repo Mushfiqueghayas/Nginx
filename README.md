@@ -3,6 +3,9 @@
     sudo apt update
     sudo apt install nginx -y
 
+<img width="1903" height="755" alt="image" src="https://github.com/user-attachments/assets/11425f07-df0e-4b68-8c7e-f76f2ffdd275" />
+
+
 # Nginx installation on RHEL/CentOS
 
     sudo yum install epel-release -y
@@ -17,9 +20,10 @@
 Visit: http://localhost:8080
 
 # 📁 NGINX File Structure (Linux)
-File/Directory	Purpose
-/etc/nginx/nginx.conf	Main configuration file
-/etc/nginx/sites-available/	Stores virtual host (server block) configs
-/etc/nginx/sites-enabled/	Symlinks to active site configs
-/var/www/html	Default web root directory
-/var/log/nginx/	Contains access and error logs
+|File/Directory	| Purpose
+--
+|/etc/nginx/nginx.conf |	Main configuration file
+|/etc/nginx/sites-available/ |	Stores virtual host (server block) configs
+|/etc/nginx/sites-enabled/ |	Symlinks to active site configs
+|/var/www/html |	Default web root directory
+|/var/log/nginx/ |	Contains access and error logs
