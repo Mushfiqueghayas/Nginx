@@ -40,7 +40,7 @@ NGINX is one of the fastest and most popular web servers used for this purpose.
 
 1. Create an HTML file:
    
-        echo "<h1>Hello from NGINX Web Server</h1>" | sudo tee /var/www/html/index.html
+        echo "This is MUSHFIQUE GHAYAS from NGINX Web Server" | sudo tee /var/www/html/index.html
 
 3. Reload NGINX:
    
