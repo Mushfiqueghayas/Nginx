@@ -20,10 +20,10 @@
 Visit: http://localhost:8080
 
 # 📁 NGINX File Structure (Linux)
-`File/Directory` `Purpose`
---
-|/etc/nginx/nginx.conf |	Main configuration file
-|/etc/nginx/sites-available/ |	Stores virtual host (server block) configs
-|/etc/nginx/sites-enabled/ |	Symlinks to active site configs
-|/var/www/html |	Default web root directory
-|/var/log/nginx/ |	Contains access and error logs
+|      File/Directory        |    Purpose                                  |
+|----------------------------|---------------------------------------------|
+|/etc/nginx/nginx.conf       |	Main configuration file                    |
+|/etc/nginx/sites-available/ |	Stores virtual host (server block) configs |
+|/etc/nginx/sites-enabled/   |	Symlinks to active site configs            |
+|/var/www/html               |	Default web root directory                 |
+|/var/log/nginx/             |	Contains access and error logs             |
