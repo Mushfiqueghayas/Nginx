@@ -20,7 +20,7 @@
 Visit: http://localhost:8080
 
 # 📁 NGINX File Structure (Linux)
-|File/Directory	| Purpose
+`File/Directory` `Purpose`
 --
 |/etc/nginx/nginx.conf |	Main configuration file
 |/etc/nginx/sites-available/ |	Stores virtual host (server block) configs
