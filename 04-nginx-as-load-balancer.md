@@ -129,6 +129,10 @@ Run it multiple times — you should see the response alternate between:
 
 ✅ You’ve just created a working load balancer using NGINX!
 
+<img width="1715" height="356" alt="image" src="https://github.com/user-attachments/assets/7badccf1-1211-4bd5-8e6d-a8dd5a6beb8c" />
+
+<img width="1605" height="369" alt="image" src="https://github.com/user-attachments/assets/722a4d35-797d-4790-a95f-9217a9e900fb" />
+
 ## 🔄 Switching Load Balancing Methods
 
 ### Use Least Connections
