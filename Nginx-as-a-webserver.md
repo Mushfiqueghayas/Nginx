@@ -67,17 +67,17 @@ NGINX is one of the fastest and most popular web servers used for this purpose.
 # 🔄 Root vs Alias
 These two directives behave differently inside location blocks.
 
-## root example:
-  location /static/ {
-      root /data/www;
-  }
-  # /static/img.png → /data/www/static/img.png
+## `root` example:
+    location /static/ {
+        root /data/www;
+    }
+    # /static/img.png → /data/www/static/img.png
 
-## alias example:
-  location /static/ {
-      alias /data/www/;
-  }
-  # /static/img.png → /data/www/img.png
+## `alias` example:
+    location /static/ {
+        alias /data/www/;
+    }
+    # /static/img.png → /data/www/img.png
 📌 Use alias when you want to replace the URI path.
 
 # 🧯 Common Errors & Fixes
