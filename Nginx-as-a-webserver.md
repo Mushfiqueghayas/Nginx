@@ -55,16 +55,16 @@ NGINX is one of the fastest and most popular web servers used for this purpose.
    
         mkdir nginx-static && cd nginx-static
 
-3. Add index.html:
+2. Add index.html:
    
         <!-- index.html -->
         <h1>Hello from NGINX in Docker!</h1>
   
-5. Run NGINX Docker container:
+3. Run NGINX Docker container:
    
         docker run --name web-nginx -v $PWD:/usr/share/nginx/html:ro -p 8080:80 -d nginx
 
-5.Open in browser:
+4. Open in browser:
 
         http://localhost:8080
   
