@@ -46,6 +46,7 @@ Replace with the following:
    
     server {
      listen 80;
+     listen 443 ssl;
      server_name localhost;
   
      root /var/www/html;
