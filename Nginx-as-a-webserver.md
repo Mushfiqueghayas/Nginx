@@ -22,12 +22,6 @@ NGINX is one of the fastest and most popular web servers used for this purpose.
       }
   }
 
-<img width="1110" height="851" alt="image" src="https://github.com/user-attachments/assets/c8c0132d-820b-42dc-8ea5-54b8c0e1d832" />
-
-<img width="877" height="112" alt="image" src="https://github.com/user-attachments/assets/03c59710-0a22-495a-bbdb-05c6aa585863" />
-
-<img width="1399" height="501" alt="image" src="https://github.com/user-attachments/assets/c49f6d1a-bc93-44be-8f03-8053e369bc78" />
-
 # Breakdown:
  * listen 80; → Listens on HTTP port 80
  * server_name localhost; → Domain or IP to respond to
@@ -35,6 +29,11 @@ NGINX is one of the fastest and most popular web servers used for this purpose.
  * index → Default file to serve (usually index.html)
  * location / → URL path handling
 
+<img width="1110" height="851" alt="image" src="https://github.com/user-attachments/assets/c8c0132d-820b-42dc-8ea5-54b8c0e1d832" />
+
+<img width="877" height="112" alt="image" src="https://github.com/user-attachments/assets/03c59710-0a22-495a-bbdb-05c6aa585863" />
+
+<img width="1399" height="501" alt="image" src="https://github.com/user-attachments/assets/c49f6d1a-bc93-44be-8f03-8053e369bc78" />
 
 # 🧪 Demo: Serve a Static Website Using NGINX
 
