@@ -14,10 +14,10 @@ This is ideal for local development, internal tools, and non-public test environ
 
 ## Step 1: Generate SSL Certificate and Key
   
-  sudo openssl req -x509 -nodes -days 365 \
-   -newkey rsa:2048 \
-   -keyout /etc/ssl/private/nginx-selfsigned.key \
-   -out /etc/ssl/certs/nginx-selfsigned.crt
+   sudo openssl req -x509 -nodes -days 365 \
+    -newkey rsa:2048 \
+    -keyout /etc/ssl/private/nginx-selfsigned.key \
+    -out /etc/ssl/certs/nginx-selfsigned.crt
    
 When prompted:
 
@@ -27,24 +27,24 @@ When prompted:
 
 Edit the default site config:
 
-  sudo nano /etc/nginx/sites-available/default
+   sudo nano /etc/nginx/sites-available/default
   
 Replace with the following:
 
-  upstream service1_backend {
-      server localhost:3000;
-      server localhost:3002;
-      # Optional load balancing method: round-robin (default), least_conn, ip_hash
-      # least_conn;
-  }
+   upstream service1_backend {
+       server localhost:3000;
+       server localhost:3002;
+       # Optional load balancing method: round-robin (default), least_conn, ip_hash
+       # least_conn;
+   }
+   
+   upstream service2_backend {
+       server localhost:3001;
+       server localhost:3003;
+       # ip_hash;   # Uncomment to bind a client to same backend
+   }
   
-  upstream service2_backend {
-      server localhost:3001;
-      server localhost:3003;
-      # ip_hash;   # Uncomment to bind a client to same backend
-  }
-  
-  server {
+   server {
     listen 80;
     server_name localhost;
   
