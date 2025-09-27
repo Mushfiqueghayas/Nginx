@@ -87,6 +87,17 @@ Open your browser and visit:
     https://localhost
     https://localhost/api/service1/
     https://localhost/api/service2/
+
+ <img width="1920" height="637" alt="image" src="https://github.com/user-attachments/assets/52cb6195-a662-4b16-b3aa-579e0d0b3b30" />
+
+<img width="1620" height="468" alt="image" src="https://github.com/user-attachments/assets/517b045a-ee70-41c8-b38f-8fcee137662c" />
+
+<img width="1532" height="278" alt="image" src="https://github.com/user-attachments/assets/9026c3c2-8646-46bc-aca5-9f4a5196c387" />
+
+<img width="1589" height="250" alt="image" src="https://github.com/user-attachments/assets/8f0efcbb-9c42-4f04-8411-e2b78da500b5" />
+
+<img width="1624" height="341" alt="image" src="https://github.com/user-attachments/assets/fa2718a5-c37d-43b8-acb2-87b467162d3f" />
+
     
 ⚠️ You will see a warning:
 
