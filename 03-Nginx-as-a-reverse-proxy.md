@@ -71,14 +71,14 @@ proxy_set_header → preserves original request metadata (like IP and host)
         const http = require('http');
         http.createServer((req, res) => {
           res.end('✅Hello This is MUSHFIQUE GHAYAS from Node.js backend SERVICE-2 !!!!');
-        }).listen(3000);
+        }).listen(3001);
 
 #### Run it:
 
         node server1.js &
         node server2.js &
         
-#### Your app is now running at `http://localhost:3000`
+#### Your app is now running at `http://localhost:3000` and `http://localhost:3001`
 
 ### Step 3: Test and reload NGINX
 
@@ -95,7 +95,7 @@ Step 5: Test in browser
 Visit:
 
         http://localhost:3000
-        http://localhost:3002
+        http://localhost:3001
         
 ✅ You should see: ✅Hello This is MUSHFIQUE GHAYAS from Node.js backend SERVICE-1 !!!!
 
