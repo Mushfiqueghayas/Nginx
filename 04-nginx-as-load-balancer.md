@@ -66,7 +66,7 @@ Replace contents with:
            proxy_set_header Host $host;
            proxy_set_header X-Real-IP $remote_addr;
       }
-  }
+    }
 
 ## 🧪 Demo: Load Balance Two Local Backend Servers
 Step 1: Create Backend Servers
