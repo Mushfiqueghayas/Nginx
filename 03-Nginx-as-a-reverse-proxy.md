@@ -86,7 +86,16 @@ proxy_set_header → preserves original request metadata (like IP and host)
 
 <img width="1385" height="322" alt="image" src="https://github.com/user-attachments/assets/00676f5c-1f8a-46cb-8c07-46d7a4afce05" />
 
+<img width="1153" height="115" alt="image" src="https://github.com/user-attachments/assets/810e59e0-8df7-43bb-835c-2101a9c69541" />
+
+
 ### Step 3: Test and reload NGINX
+
+Create a symlink:
+
+		sudo ln -s /etc/nginx/sites-available/myapp.conf /etc/nginx/sites-enabled/
+
+<img width="1233" height="85" alt="image" src="https://github.com/user-attachments/assets/7534d76f-c522-4598-b628-44d9275df2e0" />
 
 Check config for syntax errors:
 
