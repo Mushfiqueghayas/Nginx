@@ -52,17 +52,17 @@ NGINX is one of the fastest and most popular web servers used for this purpose.
 ## 🐳 Option 2: Serve HTML from Docker
 
 1. Create a project folder:
-  mkdir nginx-static && cd nginx-static
+        mkdir nginx-static && cd nginx-static
 
 3. Add index.html:
-  <!-- index.html -->
-  <h1>Hello from NGINX in Docker!</h1>
+        <!-- index.html -->
+        <h1>Hello from NGINX in Docker!</h1>
   
 4. Run NGINX Docker container:
-  docker run --name web-nginx -v $PWD:/usr/share/nginx/html:ro -p 8080:80 -d nginx
+        docker run --name web-nginx -v $PWD:/usr/share/nginx/html:ro -p 8080:80 -d nginx
 
 5.Open in browser:
-  http://localhost:8080
+      http://localhost:8080
   
 # 🔄 Root vs Alias
 These two directives behave differently inside location blocks.
