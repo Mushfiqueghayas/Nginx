@@ -115,8 +115,8 @@ Visit:
         http://localhost:3000
         http://localhost:3001
 		OR
-		http://localhost:3000/api/service1/
-		http://localhost:3001/api/service2/
+		http://localhost/api/service1/
+		http://localhost/api/service2/
 		
         
 ✅ You should see: ✅Hello This is MUSHFIQUE GHAYAS from Node.js backend SERVICE-1 !!!!
